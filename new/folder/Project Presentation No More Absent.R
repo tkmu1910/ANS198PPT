@@ -40,6 +40,11 @@ ggplot(data=SuperstoreData, aes(x = Category, y = Sales, fill = Category)) +
   scale_fill_manual(values = c("#4F91AF" , "#bb7493", "#aae68f" )) +  
   ggtitle("Sales of each Category") 
 
+ggplot(data=SuperstoreData, aes(x = Category, y = Sales, fill = Category)) + 
+  geom_bar(stat = "Identity") + 
+  scale_fill_manual(values = c("#4F91AF" , "#bb7493", "#aae68f" )) +  
+  ggtitle("Sales of each Category") 
+
 #Sales of each Sub-Category
 ggplot(data=SuperstoreData, aes(x = Sub.Category, y = Sales, fill = Category)) + 
   geom_bar(stat = "Summary") + 
